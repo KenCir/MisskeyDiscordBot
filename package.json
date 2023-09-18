@@ -1,0 +1,42 @@
+{
+  "name": "misskey-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "private": true,
+  "scripts": {
+    "start": "node .",
+    "dev": "ts-node src/index.ts",
+    "clean": "rimraf dist/*",
+    "tsc": "tsc",
+    "build": "clean && lint && tsc",
+    "eslint": "eslint --fix --ext .ts src",
+    "prettier": "prettier --write 'src/**/*.ts'",
+    "lint": "prettier --write 'src/**/*.ts' && eslint --fix --ext .ts src"
+  },
+  "keywords": [],
+  "author": "Ken_Cir",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KenCir/MisskeyDiscordBot.git"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "log4js": "^6.9.1",
+    "reconnecting-websocket": "^4.4.0"
+  }
+}

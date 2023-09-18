@@ -1,0 +1,43 @@
+import MisskeyNote from '../notes/MisskeyNote';
+import MisskeyPage from '../pages/MisskeyPage';
+import MisskeyUserLite from './MisskeyUserLite';
+
+export default interface MisskeyUserDetailedNotMe extends MisskeyUserLite {
+    url: string | null;
+    uri: string | null;
+    moveToUri: string | null;
+    alsoKnownAs: Array<string> | null;
+    createdAt: string;
+    updatedAt: string | null;
+    lastFetchAt: string | null;
+    bannerUrl: string | null;
+    bannerBlurhash: string | null;
+    isLocked: boolean;
+    isSlienced: boolean;
+    isSuspended: boolean;
+    description: string | null;
+    location: string | null;
+    birthday: string | null;
+    lang: string | null;
+    fields: Array<{ name: string; value: string }>;
+    followersCount: number;
+    followingCount: number;
+    notesCount: number;
+    pinnedNoteId: Array<string>;
+    pinnedNote: Array<MisskeyNote>;
+    pinnedPageId: string;
+    pinnedPage: MisskeyPage;
+    publicReactions: boolean;
+    twoFactorEnabled: boolean;
+    usePasswordLessLogin: boolean;
+    securityKeys: boolean;
+    isFollowing: boolean;
+    isFollowed: boolean;
+    hasPendingFollowRequestFromYou: boolean;
+    hasPendingFollowRequestToYou: boolean;
+    isBlocking: boolean;
+    isBlocked: boolean;
+    isMuted: boolean;
+    isRenoteMuted: boolean;
+    memo: string;
+}
